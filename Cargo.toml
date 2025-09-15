@@ -1,0 +1,21 @@
+[package]
+name = "full-search-jp"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+lindera = "1.2.0"
+tantivy = "0.25.0"
+
+#lindera-tantivy = "1.0.2"
+# 2025/09/15現在、crates.ioに上がっている1.0.2は最新のlinderaに対応していない模様
+# Git(https://github.com/lindera/lindera-tantivy)にあるソースはエラーが出ないのでしばらくはこれを使う
+lindera-tantivy = { git = "https://github.com/lindera/lindera-tantivy" }
+
+[profile.release]
+opt-level = "z"
+debug = false
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
