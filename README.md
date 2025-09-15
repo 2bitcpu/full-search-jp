@@ -25,9 +25,9 @@ docker run --rm -it --mount type=bind,source="$(pwd)",target=/project -w /projec
 ```
 
 
+辞書ファイルについてはライセンスがよく解らなかったので成果物から削除しました。   
 
 辞書の作成方法は、[```lindera-cli```](https://crates.io/crates/lindera-cli)のcrates.ioに記載があります。
-
 
 これを元にdockerで作成する方法は[こちら](https://github.com/2bitcpu/documents/tree/main/container/make-linedra-dic)にまとめておきました。
 
