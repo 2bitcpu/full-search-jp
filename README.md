@@ -31,3 +31,5 @@ docker run --rm -it --mount type=bind,source="$(pwd)",target=/project -w /projec
 
 これを元にdockerで作成する方法は[こちら](https://github.com/2bitcpu/documents/tree/main/container/make-linedra-dic)にまとめておきました。
 
+[!WARNING]
+バージョンアップに伴い、辞書も作り直した方が良いようです

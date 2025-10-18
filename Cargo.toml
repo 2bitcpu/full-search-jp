@@ -4,14 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-lindera = "1.2.0"
+chrono = { version = "0.4.42", default-features = false, features = ["serde", "now"] }
+lindera = "1.4.1"
+lindera-tantivy = "1.1.0"
 tantivy = "0.25.0"
-
-#lindera-tantivy = "1.0.2"
-# 2025/09/15現在、crates.ioに上がっている1.0.2は最新のlinderaに対応していない模様でbuild出来ませんでした。
-# Git(https://github.com/lindera/lindera-tantivy)にあるソースはエラーが出ないのでしばらくはこれを使うことにします。
-# 頻繁にアクセスするならローカルにクローンして使った方が良いかも
-lindera-tantivy = { git = "https://github.com/lindera/lindera-tantivy" }
 
 [profile.release]
 opt-level = "z"
